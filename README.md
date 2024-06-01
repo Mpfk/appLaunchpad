@@ -1,6 +1,6 @@
-# Terraform Infrastructure
+# appLaunchpad
 
-This Terraform configuration sets up an AWS CodeCommit repository and an AWS Amplify App using the CodeCommit repository as the source.
+This Terraform configuration sets up an AWS CodeCommit repository and an AWS Amplify App using the CodeCommit repository as the source. Get building faster!
 
 ## Prerequisites
 
@@ -10,26 +10,33 @@ This Terraform configuration sets up an AWS CodeCommit repository and an AWS Amp
 
 ## Usage
 
-```hcl
-module "codecommit_repository" {
-  source = "./path_to_your_module/infrastructure/terraform"
+### Open terminal in main folder
 
-  project_name                  = "myproject"
-  region                        = "us-east-1"
-  description                   = "My project description"
-  default_branch                = "main"
-  tags                          = {
-    Environment = "dev"
-    Project     = "MyProject"
-  }
-  oauth_token                   = "your-oauth-token"
-  amplify_environment_variables = {
-    KEY = "value"
-  }
-}
+```bash
+cd infrastructure/terraform
 ```
+
+### Initialize Terraform
+
+```bash
+terraform init
+```
+
+### Plan the deployment
+
+```bash
+terraform plan
+```
+
+### Apply the deployment
+
+```bash
+terraform apply
+```
+
 ## Deployment Structure
 
+```
 project/
 ├── applications/
 │   └── webApp/
@@ -49,6 +56,7 @@ project/
 │       ├── outputs.tf
 │       └── README.md
 └── .gitignore
+```
 
 ## Inputs
 
