@@ -45,14 +45,14 @@ resource "null_resource" "initialize_repository" {
         git push -u origin main
       fi
     EOT
-    working_dir = "${path.module}/../../../applications/webApp"
+    working_dir = "${path.module}/../../../../applications/webApp"
     environment = {
       GIT_COMMITTER_NAME  = "terraform"
       GIT_COMMITTER_EMAIL = "terraform@example.com"
     }
   }
 
-  depends_on = [aws_codecommit_repository.this]
+  depends_on = [null_resource.initialize_repository, aws_codecommit_repository.this]
 }
 
 # Read the buildspec.yml file after it has been created
