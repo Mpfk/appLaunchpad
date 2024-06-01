@@ -55,6 +55,12 @@ resource "null_resource" "initialize_repository" {
   depends_on = [aws_codecommit_repository.this]
 }
 
+# Read the buildspec.yml file after it has been created
+data "local_file" "buildspec" {
+  depends_on = [null_resource.initialize_repository]
+  filename   = "${path.module}/../../../applications/webApp/buildspec.yml"
+}
+
 # AWS Amplify application for the web application
 resource "aws_amplify_app" "this" {
   name                = var.project_name
@@ -62,7 +68,7 @@ resource "aws_amplify_app" "this" {
   oauth_token         = var.oauth_token
   environment_variables = var.amplify_environment_variables
 
-  build_spec          = file("${path.module}/../../../applications/webApp/buildspec.yml")
+  build_spec          = data.local_file.buildspec.content
 
   depends_on = [null_resource.initialize_repository]
 }
