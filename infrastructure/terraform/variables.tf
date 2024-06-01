@@ -34,13 +34,6 @@ variable "tags" {
   default     = {}
 }
 
-# The `oauth_token` variable specifies the OAuth token for Amplify.
-variable "oauth_token" {
-  description = "The OAuth token for Amplify"
-  type        = string
-  default     = ""
-}
-
 # The `amplify_environment_variables` variable specifies the environment variables for the Amplify app.
 variable "amplify_environment_variables" {
   description = "Environment variables for the Amplify app"

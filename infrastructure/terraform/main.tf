@@ -15,7 +15,6 @@ module "webApp" {
   description                   = var.description
   default_branch                = var.default_branch
   tags                          = var.tags
-  oauth_token                   = var.oauth_token
   amplify_environment_variables = var.amplify_environment_variables
 }
 

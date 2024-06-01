@@ -67,7 +67,6 @@ project/
 | `description`                     | The description of the CodeCommit repository     | string      | "Repository for Project UI" | no       |
 | `default_branch`                  | The default branch of the CodeCommit repository  | string      | "main"                  | no       |
 | `tags`                            | Tags to apply to the resources                   | map(string) | {}                      | no       |
-| `oauth_token`                     | The OAuth token for Amplify                      | string      | ""                      | yes      |
 | `amplify_environment_variables`   | Environment variables for the Amplify app        | map(string) | {}                      | no       |
 
 ## Outputs

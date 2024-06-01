@@ -65,7 +65,6 @@ data "local_file" "buildspec" {
 resource "aws_amplify_app" "this" {
   name                = var.project_name
   repository          = aws_codecommit_repository.this.clone_url_http
-  oauth_token         = var.oauth_token
   environment_variables = var.amplify_environment_variables
 
   build_spec          = data.local_file.buildspec.content

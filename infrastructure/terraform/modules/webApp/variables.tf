@@ -70,20 +70,6 @@ variable "tags" {
 }
 
 /**
- * The OAuth token for Amplify.
- *
- * @description The OAuth token is used for authentication with Amplify.
- * @type        string
- * @default     ""
- */
-
-variable "oauth_token" {
-  description = "The OAuth token for Amplify"
-  type        = string
-  default     = ""
-}
-
-/**
  * Environment variables for the Amplify app.
  *
  * @description Environment variables can be used to configure the behavior of the Amplify app.
