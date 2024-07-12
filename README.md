@@ -5,9 +5,10 @@ appLaunchpad is a Terraform project designed to deploy a web application infrast
 ## Table of Contents
 
 - [Directory Structure](#directory-structure)
-- [AWS CLI Login](#aws-cli-login)
-- [Terraform Deployment](#terraform-deployment)
-- [Clean up](#terraform-destruction)
+- [Configure AWS Credentials](#configure-aws-credentials)
+- [Prerequisites](#prerequisites)
+- [Deployment](#deployment)
+- [Clean up](#clean-up)
 - [Variables](#variables)
 - [Outputs](#outputs)
 
@@ -43,21 +44,26 @@ Before getting started with the deployment, make sure you have the following pre
 - Terraform installed on your local machine.
 - Git installed on your local machine.
 
-If you don't have any of these prerequisites, please refer to the official documentation for installation instructions.
+## Configure AWS Credentials
 
-Once you have all the prerequisites in place, you can proceed with the deployment steps mentioned below.
-
-## AWS CLI Login
-
-Before deploying the infrastructure, ensure you are logged in to the AWS CLI with the correct profile. Use the following command to configure your AWS CLI with the appropriate credentials:
+Before applying changes to the infrastructure, ensure you are logged in to the AWS Command Line Interface (CLI) with the correct profile. 
 
 ```sh
 aws configure
 ```
-Or if connecting to an AWS organziation:
+
+### IAM Identity Center (SSO)
+
+If you want to connect to an AWS Organization through IAM Identity Center, use:
 
 ```sh
 aws sso configure
+```
+
+If your temporary credentials have expired, use the following to log back in:
+
+```sh
+aws sso login --profile <profile_name>
 ```
 
 ## Deployment
@@ -73,7 +79,7 @@ cd infrastructure/
 terraform init
 ```
 
-3. Plan the deployment to review the changes, capturing variables in a `terraform.tfvars` file:
+3. Plan the deployment to review the changes, capturing variables in a `terraform.tfplan` file:
 
 ```sh
 terraform plan -out=terraform.tfplan
