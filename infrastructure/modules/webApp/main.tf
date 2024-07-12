@@ -27,6 +27,15 @@ resource "null_resource" "push_initial_commit" {
       AWS_PROFILE=${var.aws_profile} git push -u origin prod
     EOT
   }
+
+    provisioner "local-exec" {
+    when    = create
+    command = <<-EOT
+      cd ../applications/webApp/
+      git checkout -b dev
+      AWS_PROFILE=${var.aws_profile} git push -u origin dev
+    EOT
+  }
 }
 
 resource "aws_iam_policy" "amplify_codecommit_access" {
@@ -80,10 +89,12 @@ resource "aws_amplify_app" "web_app" {
   }
 }
 
-# Existing resources for aws_amplify_branch and aws_codecommit_repository remain unchanged.
-
 resource "aws_amplify_branch" "prod_branch" {
   app_id      = aws_amplify_app.web_app.id
   branch_name = "prod"
 }
 
+resource "aws_amplify_branch" "dev_branch" {
+  app_id      = aws_amplify_app.web_app.id
+  branch_name = "dev"
+}
