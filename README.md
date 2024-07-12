@@ -73,16 +73,16 @@ cd infrastructure/
 terraform init
 ```
 
-3. Plan the deployment to review the changes:
+3. Plan the deployment to review the changes, capturing variables in a `terraform.tfvars` file:
 
 ```sh
-terraform plan
+terraform plan -out=terraform.tfplan
 ```
 
 4. Apply the changes to deploy the infrastructure:
 
 ```sh
-terraform apply
+terraform apply "terraform.tfplan"
 ```
 
 ## Clean up
