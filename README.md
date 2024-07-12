@@ -96,7 +96,7 @@ terraform apply "terraform.tfplan"
 If you want to permanently delete the resources created by appLaunchpad, destroy the deployed infrastructure with the following command:
 
 ```sh
-terraform destroy
+terraform destroy "terraform.tfplan"
 ```
 
 ## Variables
