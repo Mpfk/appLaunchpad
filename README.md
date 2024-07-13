@@ -38,8 +38,11 @@ The project is structured is as follows:
 │   ├── main.tf
 │   ├── modules/
 │   │   └── webApp/
-│   │       ├── main.tf
+│   │       ├── amplify.tf
+│   │       ├── credentials.tf
+│   │       ├── domain.tf
 │   │       ├── outputs.tf
+│   │       ├── repository.tf
 │   │       └── variables.tf
 │   └── variables.tf
 ├── .gitignore
