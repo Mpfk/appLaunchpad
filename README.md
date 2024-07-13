@@ -119,3 +119,7 @@ The project generates the following outputs:
 
 - `repository_url`: The URL of the CodeCommit repository.
 - `amplify_app_id`: The ID of the Amplify app.
+
+## Disclaimer
+
+This is a peronal project I'm making available to others. This is not an official AWS repository, and the code posted here is my own. If you'd like to contribute, submit a pull request. Thanks for stopping by! :)
