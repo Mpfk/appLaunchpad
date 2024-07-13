@@ -10,8 +10,9 @@ This project is meant to be a helpful foundation for other projects! Add your ow
 2. Push your code as an initial commit to that repository
 3. Create an Amplify App using the repository
 4. Set up production and devleopment branches
+5. [Optional] Configure a custom domain through Route 53
 
-Feel free to fork and add additional models which tie into your application.
+Feel free to fork and add additional module which tie into your application.
 
 ## Table of Contents
 
@@ -50,10 +51,10 @@ The project is structured is as follows:
 
 Before getting started with the deployment, make sure you have the following prerequisites:
 
-- An AWS account with appropriate permissions to create resources.
-- AWS CLI installed on your local machine.
-- Terraform installed on your local machine.
-- Git installed on your local machine.
+- An [AWS account](https://aws.amazon.com/free/) with appropriate permissions to create resources.
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions) installed on your local machine.
+- [Terraform](https://developer.hashicorp.com/terraform/downloads) installed on your local machine.
+- [Git](https://git-scm.com/downloads) installed on your local machine.
 
 ## Configure AWS Credentials
 
