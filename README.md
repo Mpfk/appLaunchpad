@@ -1,6 +1,6 @@
-# appLaunchpad
+# appLaunchpad 🚀
 
-appLaunchpad is a Terraform project designed to deploy a web application infrastructure on AWS. It utilizes AWS CodeCommit for source control and AWS Amplify for application deployment.
+appLaunchpad is a Terraform starter pack which provides the foundational elements of a web app. Build on top of it to make deploying your projects easier!
 
 ## What does it do?
 
