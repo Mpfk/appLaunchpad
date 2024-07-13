@@ -101,11 +101,17 @@ terraform destroy "terraform.tfplan"
 
 ## Variables
 
-The following variables are used in the project:
+The following variables are required:
 
 - [`aws_region`]: The AWS region to deploy resources in.
 - [`aws_profile`]: The AWS CLI profile to use.
 - [`project`]: The project name to use as a prefix for resource names.
+
+While these variables are optional:
+
+- ['custom_domain']: Creates a Hosted Zone in Route 53 and configuration in Amplify (DEFAULT: `NULL`).
+- ['prod_subdomain']: The subdomain for the production branch (DEFAULT: `NULL`).
+- ['dev_subdomain']: The subdomain for the development branch (DEFAULT: `dev`).
 
 ## Outputs
 
