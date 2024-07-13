@@ -11,6 +11,8 @@ This project is meant to be a helpful foundation for other projects! Add your ow
 3. Create an Amplify App using the repository
 4. Set up production and devleopment branches
 
+Feel free to fork and add additional models which tie into your application.
+
 ## Table of Contents
 
 - [Directory Structure](#directory-structure)
