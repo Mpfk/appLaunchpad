@@ -2,6 +2,15 @@
 
 appLaunchpad is a Terraform project designed to deploy a web application infrastructure on AWS. It utilizes AWS CodeCommit for source control and AWS Amplify for application deployment.
 
+## What does it do?
+
+This project is meant to be a helpful foundation for other projects! Add your own web app to the `/applications/webApp/` folder, then run the deployment instructions below. The scripts will: 
+
+1. Create an AWS Code Commit repository
+2. Push your code as an initial commit to that repository
+3. Create an Amplify App using the repository
+4. Set up production and devleopment branches
+
 ## Table of Contents
 
 - [Directory Structure](#directory-structure)
