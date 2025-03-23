@@ -1,5 +1,9 @@
 # appLaunchpad 🚀
 
+**Note! Services that are used in this template have been depricated. To prevent conflicts or errors for new deployments, this repository has been Archived. For a similar script, please see: [Mpfk/vue-quick-deploy](https://github.com/Mpfk/vue-quick-deploy).**
+
+---
+
 appLaunchpad is a Terraform starter pack which provides the foundational elements of a web app. Build on top of it to make deploying your projects easier!
 
 ## What does it do?
